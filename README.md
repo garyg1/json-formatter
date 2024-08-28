@@ -1,10 +1,10 @@
-# Simple JSON Formatter
-A simple JavaScript program that beautifies JSON in a human readable way. Uses a heuristic approach (no constaint optimization).
+# Humanistic JSON Formatter
+A simple JavaScript program that attempts to format JSON in a human-readable way. Uses a heuristic approach (no constaint optimization).
 
-JSON is a human- and machine-readable data representation language. Despite many attempts to replace it (e.g. YAML) -
-it remains the universal standard. However, there is a significant disparity between how humans and machine make
-spacing and wrapping decisions when formatting JSON. In industry, I find there are many times when humans need
-to read large JSON (e.g. `az vm list-skus -l uswest --all`), and machine-formatted JSON is often not space efficient.
+JSON is a human- and machine-readable data representation language. However, humans and machines make vastly different
+spacing and wrapping decisions when writing it. I think this a high scale problem - there are many times when developers
+in industry need to read large JSON objects (e.g. `az vm list-skus -l uswest --all`), and machine-formatted JSON is often
+not optimal for human readability. 
 
 For example, consider the following simple JSON definition.
 ```json
@@ -30,9 +30,7 @@ Most JSON prettifiers (e.g., VSCode) will print
 ]
 ```
 
-No human developer would ever write that! Humans write JSON in a more natural and readable way.
-
-For example:
+Humans write JSON in a more natural and readable way. For example:
 ```jsonc
 [1, 2, 3, [4, 5, [6, 7, 8]], "9"]
 ```
@@ -56,9 +54,10 @@ For example:
 ]
 ```
 
+
 ## Prior Art
 I did some quick Google searching (e.g. "json prettifier site:*.github.io") and looked at a few other developers'
-sites. None formatted the JSON the way I wanted it. I decided it would take an hour to write my own, so I gave up.
+sites. None formatted the JSON the way I find optimal. I decided it would take an hour to write my own, so that's what I did.
 
 ## How it works
 We use a simple heuristic that is good enough in most cases.
@@ -70,7 +69,7 @@ In general this is a constrained optimization problem depending on the metric to
 (# of lines, # of expansions, etc.). But our heuristic works well enough in practical cases.
 
 ## Object Example
-```json
+```
 ----------------------------------------------------------------------------------------------------
 {"the quick brown fox": {"jumps": "over", "the lazy": ["d", "o", "g"]}}
 --------------------------------------------------------------------------------------------------
@@ -365,7 +364,7 @@ In general this is a constrained optimization problem depending on the metric to
 ```
 
 ## Array Example
-```json
+```
 ------------------------------------------------------------
 [1, 2, 3, [4, 5, [6, 7, 8]], "9"]
 -----------------------------------------------------------
