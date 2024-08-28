@@ -52,21 +52,27 @@ function sumArray(arr) {
  */
 function prettifyJson(object, indent, lineLength) {
     const singleLineLengths = {};
-    function getSLLength(o) {
+    function getSingleLineLength(o) {
         let ans = 0;
         if (isArray(o)) {
-            ans = o
-                .map(e => getSLLength(e))
-                .reduce((s, len) => s + len + ARRAY_SEP.length, 0);
+            ans = sumArray(o.map(e => getSingleLineLength(e) + ARRAY_SEP.length));
             ans += "[]".length;
             if (o.length > 0) {
                 ans -= ARRAY_SEP.length;
             }
         }
         else if (isObject(o)) {
-            ans = Object.entries(o)
-                .map((kv) => JSON.stringify(kv[0]).length + OBJ_KV_SEP.length + getSLLength(kv[1]))
-                .reduce((s, len) => s + len + ARRAY_SEP.length, 0);
+            ans = sumArray(
+                Object.entries(o)
+                    .map((kv) => (
+                        JSON.stringify(kv[0]).length
+                        + OBJ_KV_SEP.length
+                        + getSingleLineLength(kv[1])
+                        + ARRAY_SEP.length)));
+            ans += "{}".length;
+            if (Object.keys(o).length > 0) {
+                ans -= ARRAY_SEP.length;
+            }
         }
         else {
             ans = JSON.stringify(o).length;
@@ -76,25 +82,33 @@ function prettifyJson(object, indent, lineLength) {
         return ans;
     }
 
-    // precompute
-    getSLLength(object);
-
-
-    function getPrettyRepresentation(o, currIndent, nextIndent, forceSingleLine) {
-        const currSLWidth = lineLength - currIndent;
-        const nextLWidth = lineLength - nextIndent;
-        if (isArray(o)) {
-            if (getSLLength(o) < currSLWidth || forceSingleLine) {
-                return "[" + o.map(e => getPrettyRepresentation(e, 0, 0, true)).join(ARRAY_SEP) + "]";
+    /**
+     * @param {any} currentNode
+     * @param {number} currIndent 
+     * @param {number} nextIndent 
+     * @param {boolean} forceSingleLine 
+     * @returns {string}
+     */
+    function getPrettyRepresentation(currentNode, currIndent, nextIndent, forceSingleLine) {
+        const currLineWidth = lineLength - currIndent;
+        const nextLineWidth = lineLength - nextIndent;
+        if (isArray(currentNode)) {
+            if (getSingleLineLength(currentNode) < currLineWidth || forceSingleLine) {
+                return ["[", currentNode.map(e => getPrettyRepresentation(e, 0, 0, true)).join(ARRAY_SEP), "]"].join("");
             }
-            else if (getSLLength(o) + indent < nextLWidth) {
-                return "[\n"
-                    + " ".repeat(nextIndent + indent) + o.map(e => getPrettyRepresentation(e, 0, 0, true)).join(ARRAY_SEP) + "\n"
-                    + " ".repeat(nextIndent) + "]";
+            else if (getSingleLineLength(currentNode) + indent < nextLineWidth) {
+                return [
+                    "[\n",
+                    " ".repeat(nextIndent + indent),
+                    currentNode.map(e => getPrettyRepresentation(e, 0, 0, true)).join(ARRAY_SEP),
+                    "\n",
+                    " ".repeat(nextIndent),
+                    "]"
+                ].join("");
             }
             else {
                 const ans = ["[\n"];
-                for (const e of o) {
+                for (const e of currentNode) {
                     ans.push(" ".repeat(nextIndent + indent));
                     ans.push(getPrettyRepresentation(e, nextIndent + indent, nextIndent + indent));
                     ans.push(ARRAY_SEP);
@@ -110,23 +124,29 @@ function prettifyJson(object, indent, lineLength) {
                 return ans.join("");
             }
         }
-        else if (isObject(o)) {
-            if (getSLLength(o) < currSLWidth || forceSingleLine) {
-                return "{" + Object.entries(o)
-                    .map((kvp) => [
-                        getPrettyRepresentation(kvp[0], 0, 0, true),
-                        OBJ_KV_SEP,
-                        getPrettyRepresentation(kvp[1], 0, 0, true),
-                    ].join(""))
-                    .join(ARRAY_SEP) + "}";
+        else if (isObject(currentNode)) {
+            if (getSingleLineLength(currentNode) < currLineWidth || forceSingleLine) {
+                return [
+                    "{",
+                    Object.entries(currentNode)
+                        .map((kvp) => [
+                            getPrettyRepresentation(kvp[0], 0, 0, true),
+                            OBJ_KV_SEP,
+                            getPrettyRepresentation(kvp[1], 0, 0, true)].join(""))
+                        .join(ARRAY_SEP),
+                    "}"
+                ].join("");
             }
             else {
                 const ans = ["{\n"];
-                for (const [k, v] of Object.entries(o)) {
+                for (const [k, v] of Object.entries(currentNode)) {
                     ans.push(" ".repeat(nextIndent + indent));
                     ans.push(JSON.stringify(k));
                     ans.push(OBJ_KV_SEP);
-                    ans.push(getPrettyRepresentation(v, nextIndent + indent + JSON.stringify(k).length + ARRAY_SEP.length, nextIndent + indent));
+                    ans.push(
+                        getPrettyRepresentation(v,
+                            nextIndent + indent + JSON.stringify(k).length + OBJ_KV_SEP.length,
+                            nextIndent + indent));
                     ans.push(ARRAY_SEP);
                     ans.push("\n");
                 }
@@ -140,15 +160,17 @@ function prettifyJson(object, indent, lineLength) {
             }
         }
         else {
-            return JSON.stringify(o);
+            return JSON.stringify(currentNode);
         }
     }
 
-    return getPrettyRepresentation(object, 0, 0);
+    const result = getPrettyRepresentation(object, 0, 0);
+    const trimmedResult = result.split("\n").map(s => s.trimEnd()).join("\n");
+    return trimmedResult;
 }
 
 function test() {
-    for (let i = 60; i >= 10; i--) {
+    for (let i = 60; i >= 10; i -= 1) {
         console.log('-'.repeat(i));
         console.log(prettifyJson([1, 2, 3, [4, 5, [6, 7, 8]], "9"], 4, i));
     }

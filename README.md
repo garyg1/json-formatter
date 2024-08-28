@@ -103,133 +103,133 @@ In general this is a constrained optimization problem depending on the metric to
 ----------------------------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 --------------------------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ------------------------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ----------------------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 --------------------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ------------------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ----------------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 --------------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ------------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ----------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 --------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ------------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ----------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 --------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ------------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ----------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 --------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ------------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": ["d", "o", "g"]
     }
 }
 ----------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
             "d", "o", "g"
         ]
@@ -238,7 +238,7 @@ In general this is a constrained optimization problem depending on the metric to
 --------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
             "d", "o", "g"
         ]
@@ -247,7 +247,7 @@ In general this is a constrained optimization problem depending on the metric to
 ------------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
             "d", "o", "g"
         ]
@@ -256,7 +256,7 @@ In general this is a constrained optimization problem depending on the metric to
 ----------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
             "d", "o", "g"
         ]
@@ -265,10 +265,10 @@ In general this is a constrained optimization problem depending on the metric to
 --------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
-            "d", 
-            "o", 
+            "d",
+            "o",
             "g"
         ]
     }
@@ -276,10 +276,10 @@ In general this is a constrained optimization problem depending on the metric to
 ------------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
-            "d", 
-            "o", 
+            "d",
+            "o",
             "g"
         ]
     }
@@ -287,10 +287,10 @@ In general this is a constrained optimization problem depending on the metric to
 ----------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
-            "d", 
-            "o", 
+            "d",
+            "o",
             "g"
         ]
     }
@@ -298,10 +298,10 @@ In general this is a constrained optimization problem depending on the metric to
 --------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
-            "d", 
-            "o", 
+            "d",
+            "o",
             "g"
         ]
     }
@@ -309,10 +309,10 @@ In general this is a constrained optimization problem depending on the metric to
 ------------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
-            "d", 
-            "o", 
+            "d",
+            "o",
             "g"
         ]
     }
@@ -320,10 +320,10 @@ In general this is a constrained optimization problem depending on the metric to
 ----------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
-            "d", 
-            "o", 
+            "d",
+            "o",
             "g"
         ]
     }
@@ -331,10 +331,10 @@ In general this is a constrained optimization problem depending on the metric to
 --------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
-            "d", 
-            "o", 
+            "d",
+            "o",
             "g"
         ]
     }
@@ -342,10 +342,10 @@ In general this is a constrained optimization problem depending on the metric to
 ------------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
-            "d", 
-            "o", 
+            "d",
+            "o",
             "g"
         ]
     }
@@ -353,10 +353,10 @@ In general this is a constrained optimization problem depending on the metric to
 ----------
 {
     "the quick brown fox": {
-        "jumps": "over", 
+        "jumps": "over",
         "the lazy": [
-            "d", 
-            "o", 
+            "d",
+            "o",
             "g"
         ]
     }
@@ -421,274 +421,274 @@ In general this is a constrained optimization problem depending on the metric to
 [1, 2, 3, [4, 5, [6, 7, 8]], "9"]
 ---------------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 --------------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 -------------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 ------------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 -----------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 ----------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 ---------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 --------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 -------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 ------------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 -----------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 ----------------------
 [
-    1, 
-    2, 
-    3, 
-    [4, 5, [6, 7, 8]], 
+    1,
+    2,
+    3,
+    [4, 5, [6, 7, 8]],
     "9"
 ]
 ---------------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [6, 7, 8]
-    ], 
+    ],
     "9"
 ]
 --------------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [6, 7, 8]
-    ], 
+    ],
     "9"
 ]
 -------------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [6, 7, 8]
-    ], 
+    ],
     "9"
 ]
 ------------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [6, 7, 8]
-    ], 
+    ],
     "9"
 ]
 -----------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [
-            6, 
-            7, 
+            6,
+            7,
             8
         ]
-    ], 
+    ],
     "9"
 ]
 ----------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [
-            6, 
-            7, 
+            6,
+            7,
             8
         ]
-    ], 
+    ],
     "9"
 ]
 ---------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [
-            6, 
-            7, 
+            6,
+            7,
             8
         ]
-    ], 
+    ],
     "9"
 ]
 --------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [
-            6, 
-            7, 
+            6,
+            7,
             8
         ]
-    ], 
+    ],
     "9"
 ]
 -------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [
-            6, 
-            7, 
+            6,
+            7,
             8
         ]
-    ], 
+    ],
     "9"
 ]
 ------------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [
-            6, 
-            7, 
+            6,
+            7,
             8
         ]
-    ], 
+    ],
     "9"
 ]
 -----------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [
-            6, 
-            7, 
+            6,
+            7,
             8
         ]
-    ], 
+    ],
     "9"
 ]
 ----------
 [
-    1, 
-    2, 
-    3, 
+    1,
+    2,
+    3,
     [
-        4, 
-        5, 
+        4,
+        5,
         [
-            6, 
-            7, 
+            6,
+            7,
             8
         ]
-    ], 
+    ],
     "9"
 ]
 ```
