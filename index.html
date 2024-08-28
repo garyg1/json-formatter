@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanistic JSON Formatter</title>
+</head>
+
+<body>
+    <div id="container">
+        <p><textarea id="json-textarea"></textarea></p>
+        <p>
+            <span>Line Length:</span><br />
+            <input type="number" id="linelength-input" />
+        </p>
+        <p>
+            <span>Indent:</span><br />
+            <input type="number" id="indent-input" />
+        </p>
+        <p>
+            <span>Output:</span><br />
+        <pre>
+<textarea readonly id="output-textarea"></textarea>
+        </pre>
+        </p>
+    </div>
+
+    <script src="formatter.js"></script>
+    <style>
+        #json-textarea,
+        #output-textarea {
+            width: 600px;
+            height: 300px;
+            resize: none;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            const jsonElt = document.getElementById("json-textarea");
+            const outputElt = document.getElementById("output-textarea");
+            const linelengthElt = document.getElementById("linelength-input");
+            const indentElt = document.getElementById("indent-input");
+            function rerender() {
+                const obj = JSON.parse(jsonElt.value);
+                const output = prettifyJson(obj, parseInt(indentElt.value), parseInt(linelengthElt.value));
+                console.log(output);
+                outputElt.innerHTML = output;
+            }
+
+            jsonElt.onchange = rerender;
+            linelengthElt.onchange = rerender;
+            indentElt.onchange = rerender;
+
+            jsonElt.value = '{"the quick brown fox": {"jumps": "over", "the lazy": ["d", "o", "g"]}}';
+            linelengthElt.value = 40;
+            indentElt.value = 4;
+
+            rerender();
+        };
+    </script>
+</body>
+
+</html>
