@@ -1,11 +1,10 @@
 # Simple JSON Formatter
-A simple JavaScript program that beautifies JSON in a human readable way. Uses a heuristic approach - no constaint optimization.
+A simple JavaScript program that beautifies JSON in a human readable way. Uses a heuristic approach (no constaint optimization).
 
-JSON is a standard human- and machine-readable data representation language. Despite many attempts to replace it (e.g. YAML) - it remains the 
-universal standard. However, there is a significant disparity between how humans and machines choose to format JSON.
-In industry, I find there are many times when humans need to read large JSON (e.g., API responses, `az vm list-skus --all`).
-
-The way machines format JSON is not space efficient.
+JSON is a human- and machine-readable data representation language. Despite many attempts to replace it (e.g. YAML) -
+it remains the universal standard. However, there is a significant disparity between how humans and machine make
+spacing and wrapping decisions when formatting JSON. In industry, I find there are many times when humans need
+to read large JSON (e.g. `az vm list-skus -l uswest --all`), and machine-formatted JSON is often not space efficient.
 
 For example, consider the following simple JSON definition.
 ```json
@@ -56,6 +55,10 @@ For example:
     "9"
 ]
 ```
+
+## Prior Art
+I did some quick Google searching (e.g. "json prettifier site:*.github.io") and looked at a few other developers'
+sites. None formatted the JSON the way I wanted it. I decided it would take an hour to write my own, so I gave up.
 
 ## How it works
 We use a simple heuristic that is good enough in most cases.
