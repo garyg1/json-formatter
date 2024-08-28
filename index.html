@@ -58,8 +58,8 @@
             linelengthElt.onchange = rerender;
             indentElt.onchange = rerender;
 
-            jsonElt.value = '{"the quick brown fox": {"jumps": "over", "the lazy": ["d", "o", "g"]}}';
-            linelengthElt.value = 40;
+            jsonElt.value = '{"the quick brown":{"fox":{"jumps":{"over":{"the lazy":["d","o","g"]}}}}}';
+            linelengthElt.value = 80;
             indentElt.value = 4;
 
             rerender();
