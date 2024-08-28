@@ -30,14 +30,14 @@
     <style>
         #json-textarea,
         #output-textarea {
-            width: 600px;
+            width: 650px;
             height: 300px;
             resize: none;
             font-family: 'Inconsolata', 'Monaco', 'Menlo', monospace;
         }
 
         #container {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
         }
     </style>
@@ -58,7 +58,7 @@
             linelengthElt.onchange = rerender;
             indentElt.onchange = rerender;
 
-            jsonElt.value = '{"the quick brown":{"fox":{"jumps":{"over":{"the lazy":["d","o","g"]}}}}}';
+            jsonElt.value = '{"the quick brown fox":{"jumps over":{"the lazy":["d","o","g"],"the sleeping":["c","a","t"]},"sneaks under":{"the tall":["g","i","r","a","f","f","e"]}}}';
             linelengthElt.value = 80;
             indentElt.value = 4;
 
