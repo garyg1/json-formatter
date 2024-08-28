@@ -61,7 +61,7 @@ sites. None formatted the JSON the way I find optimal. I decided it would take a
 
 ## How it works
 We use a simple heuristic that is good enough in most cases.
-1. Compute tree containing lengths of each node (and its children) if they were printed on a single line.
+1. Compute tree containing length of each node (and its children) if they were printed on a single line.
 2. Walking the tree, expand the top-most elements (closest to the root) first until every subtree fits
 on a single line.
 
