@@ -1,5 +1,5 @@
 # Humanistic JSON Formatter
-A simple JavaScript program that attempts to format JSON in a human-readable way. Uses a heuristic approach (no constaint optimization).
+A simple JavaScript program that formats JSON in a human-readable way. Uses a heuristic approach (no constaint optimization).
 
 JSON is a human- and machine-readable data representation language. However, humans and machines make vastly different
 spacing and wrapping decisions when writing it. I think this a high scale problem - there are many times when developers
