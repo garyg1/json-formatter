@@ -64,10 +64,7 @@ After writing this, I asked some friends for what they use:
 * JSTool - https://www.sunjw.us/jstool/npp/ uses a different algorithm
 
 ## How it works
-We use a simple heuristic that is good enough in most cases.
-1. Compute tree containing length of each node (and its children) if they were printed on a single line.
-2. Walking the tree, expand the top-most elements (closest to the root) first until every subtree fits
-on a single line.
+We use a simple heuristic that is good enough in most cases: wrap the top-most elements (closest to the root) first until the subtree can fit on a single line.
 
 The general problem is a constrained optimization problem depending on the metric to optimize
 (# of lines, # of expansions, etc.). But our heuristic works well enough in practical cases.
