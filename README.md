@@ -1,5 +1,5 @@
 # Simple JSON Formatter
-A simple JavaScript program that formats JSON in a human-readable way. Uses a heuristic approach (no constaint optimization).
+A simple JavaScript program that formats JSON in a human-readable way. Uses a heuristic approach (no constraint optimization).
 
 JSON is a human- and machine-readable data representation language. However, humans and machines make vastly different
 spacing and wrapping decisions when writing it. There are many times when developers
@@ -69,7 +69,7 @@ We use a simple heuristic that is good enough in most cases.
 2. Walking the tree, expand the top-most elements (closest to the root) first until every subtree fits
 on a single line.
 
-In general this is a constrained optimization problem depending on the metric to optimize
+The general problem is a constrained optimization problem depending on the metric to optimize
 (# of lines, # of expansions, etc.). But our heuristic works well enough in practical cases.
 
 ## Object Example
